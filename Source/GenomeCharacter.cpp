@@ -31,9 +31,13 @@ float AGenomeCharacter::CalculateAcousticHeat()
     // 2. Panic Factor: Panic makes the character clumsy (heavy breathing, gear rattling).
     float PanicFactor = PanicLevel * 2.5f;
 
+    // 3. Injury Factor: Represents labored breathing and limping.
+    // Adds up to 1.5 units to the radius when fully impaired.
+    float InjuryFactor = InjuryModifier * 1.5f;
+
     // Final Heat Radius calculation
-    // This value will be passed to the AI to see if they are within "hearing" distance.
-    float FinalHeatRadius = BaseHeat + HeartrateFactor + PanicFactor;
+    // This value is passed to the AI to see if they are within "hearing" distance.
+    float FinalHeatRadius = BaseHeat + HeartrateFactor + PanicFactor + InjuryFactor;
 
     return FinalHeatRadius;
 }
