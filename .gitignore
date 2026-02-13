@@ -1,0 +1,12 @@
+# Unreal Engine Folders
+Binaries/*
+DerivedDataCache/*
+Intermediate/*
+Saved/*
+Build/*
+
+# IDE Folders
+.vs/
+.vscode/
+*.sln
+*.suo
